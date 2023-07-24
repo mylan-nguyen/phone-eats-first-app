@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/screens/all_recipes_screen.dart';
 import 'package:recipe_app/screens/favourite_recipes_screen.dart';
+import 'package:recipe_app/screens/generate_recipe_screen.dart';
 import 'package:recipe_app/models/recipe.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = [
     AllRecipesScreen(),
     FavouriteRecipesScreen(),
+    GenerateRecipeScreen()
   ];
 
   @override
@@ -56,6 +58,10 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Favourites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.create),
+            label: 'Generate Recipe',
           ),
         ],
       ),
